@@ -1,9 +1,27 @@
 <p>home works!</p>
 
 <h1>A</h1>
-<button type="button"  >Click</button>
+<button  mat-raised-button    (click)="RouteAbout()">Click</button>
+<div  *ngIf="start">
+</div>
+<a  (click)="counting+1" [routerLink]="['/about','4']">Check About</a>
+<!-- <p (click)="RouteAbout()">Check About</p> -->
+
+<!-- <p [routerLink]="'/about'" style="cursor: pointer; text-decoration: underline;">Go to About Page</p> -->
 
 
-<a routerLink="/about">Check About</a>
+<form (ngSubmit)="onSubmit($event)" #myForm="ngForm">
+  <input type="text" name="username" ngModel placeholder="Enter your username" />
+  <button type="submit">Submit</button>
+</form>
 
 
+
+
+
+<!-- <div (click)="onParentClick()" style="padding: 5px; background-color: lightblue;">
+  Parent
+  <div (click)="onChildClick($event)" style="padding: 5px; background-color: lightgreen;">
+    Child
+  </div>
+</div> -->

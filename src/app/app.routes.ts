@@ -13,9 +13,14 @@ export const routes: Routes = [
     component: HomeComponent,
     pathMatch:'full'
   },
+  // {
+  //   path:'about/:id',
+  //   component: AboutComponent,
+  //   pathMatch:'full'
+  // }
   {
-    path:'about',
-    component: AboutComponent,
+    path:'about/:id',
+    component:AboutComponent,
     pathMatch:'full'
   }
 ];
